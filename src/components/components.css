@@ -1,0 +1,112 @@
+.message-input-form {
+  display: flex;
+  gap: 8px;
+  padding: 16px;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.message-input:focus {
+  border-color: #667eea;
+}
+
+.message-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.send-btn {
+  padding: 8px 16px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.send-btn:hover:not(:disabled) {
+  background: #764ba2;
+}
+
+.send-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.user-profile {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.profile-content {
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.profile-content h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile-email {
+  margin: 4px 0 12px 0;
+  font-size: 13px;
+  color: #999;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.btn-logout {
+  flex: 1;
+  padding: 10px;
+  background: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-logout:hover {
+  background: #e0e0e0;
+}

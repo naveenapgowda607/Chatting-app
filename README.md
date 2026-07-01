@@ -21,8 +21,8 @@ A fully-featured professional chat application built with React, Firebase, and m
 - **Frontend:** React.js, Tailwind CSS
 - **Backend:** Firebase (Authentication, Firestore, Storage)
 - **Real-time:** Firestore Real-time Database
-- **Encryption:** libsignal-protocol / TweetNaCl.js
-- **State Management:** Context API / Redux
+- **Encryption:** TweetNaCl.js
+- **State Management:** Context API
 - **Routing:** React Router
 
 ## Installation
@@ -31,25 +31,10 @@ A fully-featured professional chat application built with React, Firebase, and m
 npm install
 ```
 
-## Configuration
-
-Add your Firebase credentials in `src/config/firebase.js`:
-
-```javascript
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
-```
-
 ## Running the Application
 
 ```bash
-npm start
+npm run dev
 ```
 
 The application will run on `http://localhost:3000`
@@ -62,15 +47,75 @@ src/
 │   └── firebase.js
 ├── pages/
 │   ├── Auth/
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   └── auth.css
 │   ├── Chat/
+│   │   ├── ChatWindow.jsx
+│   │   ├── MessageList.jsx
+│   │   ├── UserList.jsx
+│   │   └── chat.css
 │   └── Dashboard.jsx
 ├── components/
+│   ├── MessageInput.jsx
+│   ├── UserProfile.jsx
+│   └── components.css
 ├── services/
+│   ├── authService.js
+│   ├── messageService.js
+│   └── userService.js
 ├── hooks/
+│   └── useAuth.js
 ├── utils/
+│   └── encryption.js
 ├── App.jsx
-└── index.js
+├── App.css
+├── index.jsx
+└── index.css
 ```
+
+## Configuration
+
+Firebase configuration is already set up in `src/config/firebase.js` with your credentials.
+
+## Key Features
+
+### Authentication
+- Sign up with email and password
+- Sign in with email and password
+- Automatic user profile creation
+- User presence tracking
+
+### Messaging
+- Real-time message delivery
+- Message encryption support (TweetNaCl.js)
+- Read receipts
+- Timestamps for all messages
+- Message editing support (foundation)
+
+### User Management
+- Search for users by display name
+- View user online status
+- User profile information
+- Contact list
+
+## Security Features
+
+- ✅ End-to-end encryption utilities
+- ✅ Secure authentication with Firebase
+- ✅ Real-time presence tracking
+- ✅ Message encryption support
+
+## Future Enhancements
+
+- [ ] Group chat support
+- [ ] File and media sharing
+- [ ] Voice and video calling
+- [ ] Message search
+- [ ] User typing indicators
+- [ ] Message reactions
+- [ ] User blocking
+- [ ] Message forwarding
 
 ## License
 
